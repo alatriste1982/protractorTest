@@ -1,4 +1,4 @@
-// A page object for google's home page
+// A page object that models google's home page
 'use strict';
 
 var GoogleHomePage = function(){

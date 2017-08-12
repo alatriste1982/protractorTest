@@ -2,10 +2,14 @@
 
 //require pageObjects
 var googleHomePage = require('../page-objects/googleHomePage.po');
-
-describe('A sample Google test', function() {
+var googleResultPage = require('../page-objects/googleResultPage.po');
+var seleniumHqPage = require('../page-objects/seleniumHqPage.po');
+describe('Navigate to seleniumHq page using google search engine', function() {
     //Initialize pageObjects
     var googlePage = new googleHomePage();
+    var resultPage = new googleResultPage();
+    var seleniumhq = new seleniumHqPage(); 
+
     beforeEach(function(){
         browser.get(baseUrl);
     });
@@ -14,9 +18,11 @@ describe('A sample Google test', function() {
         browser.quit();
     });
 
-    it('should have a title', function(done) {
+    it('should navigate to the seleniumHQ page', function(done) {
         googlePage.search('Seleniumhq');
-        expect(browser.getCurrentUrl()).toBe('http://www.seleniumhq.org/');
+        //resultPage.getFirstResult();
+        resultPage.getResultByLinkText('Selenium - Web Browser Automation');
+        expect(seleniumhq.getTitle()).toEqual(browser.getTitle());
         done();
     });
 });
