@@ -4,15 +4,10 @@
 var GoogleResultPage = function(){
     var self = this;
     
-    //fix this
     this.getFirstResult = function(){
-        element.all(by.css('.g')).first().click;
+        element.all(by.css('.g')).first().click();
     };
 
-    this.getResultByUrl = function(){
-
-    }
-    
     this.getResultByLinkText = function(linktext){
         element(by.linkText(linktext)).click();
     }

@@ -9,19 +9,13 @@ describe('Navigate to seleniumHq page using google search engine', function() {
     var googlePage = new googleHomePage();
     var resultPage = new googleResultPage();
     var seleniumhq = new seleniumHqPage(); 
-
-    beforeEach(function(){
-        browser.get(baseUrl);
-    });
     
-    afterAll(function(){
-        browser.quit();
-    });
-
     it('should navigate to the seleniumHQ page', function(done) {
+        browser.get('http://www.google.com');
         googlePage.search('Seleniumhq');
-        //resultPage.getFirstResult();
-        resultPage.getResultByLinkText('Selenium - Web Browser Automation');
+        resultPage.getFirstResult();
+        //or use
+        //resultPage.getResultByLinkText('Selenium - Web Browser Automation');
         expect(seleniumhq.getTitle()).toEqual(browser.getTitle());
         done();
     });
