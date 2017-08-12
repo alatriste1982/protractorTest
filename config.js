@@ -13,10 +13,9 @@ exports.config = {
         browser.manage().timeouts().implicitlyWait(10000);
         //browser.driver.manage().window().maximize(); doesn't work with firefox < 55 https://github.com/mozilla/geckodriver/issues/820
         //Setup of the test reporter
-        jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-            //consolidate: true,
-            consolidateAll: true,
-            savePath: './test-results/',
+        jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({ 
+            savePath: 'test-results',
+            cleanDestination: false,
             takeScreenshots: true,
             takeScreenshotsOnlyOnFailures: true
         }));
