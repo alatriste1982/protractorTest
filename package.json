@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alatriste1982/protractorTest.git"
+  },
+  "author": "sgaray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alatriste1982/protractorTest/issues"
+  },
+  "homepage": "https://github.com/alatriste1982/protractorTest#readme",
+
+  "dependencies": {
+    "protractor-jasmine2-html-reporter": "^0.0.7"
+  }
+}
