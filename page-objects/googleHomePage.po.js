@@ -3,7 +3,7 @@
 
 var GoogleHomePage = function(){
     var self = this;
-    this.searchField = element(by.id('lst-ib'));
+    this.searchField = element(by.name('q'));
 
     this.search = function(searchTerm){
         self.searchField.clear();
