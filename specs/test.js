@@ -14,9 +14,8 @@ describe('Navigate to seleniumHq page using google search engine', function() {
         browser.get('http://www.google.com');
         googlePage.search('Seleniumhq');
         resultPage.getFirstResult();
-        //or use
-        //resultPage.getResultByLinkText('Selenium - Web Browser Automation');
-        expect(seleniumhq.getTitle()).toEqual(browser.getTitle());
+
+        expect(seleniumhq.getTitle()).toEqual('SeleniumHQ Browser Automation');
         done();
     });
 });
